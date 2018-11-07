@@ -191,4 +191,6 @@ bh_unicode_properties.cache
 # https://packagecontrol.io/packages/sublime-github
 GitHub.sublime-settings
 
+**/.phpintel
+
 # End of https://www.gitignore.io/api/osx,intellij,phpstorm,sublimetext
