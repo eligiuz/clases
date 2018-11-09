@@ -26,6 +26,7 @@
         $mvc = new Controladores();
         $mvc->enlazarPagina();
 
+
          ?>
         
     </section>
