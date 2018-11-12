@@ -1,7 +1,6 @@
 <?php
-require "BD.php";
 
-class Modelos extends BD2{
+class Modelos{
 
     public static function enlazarPaginaModelo($paginaModelo){
 
@@ -16,25 +15,6 @@ class Modelos extends BD2{
         }
 
         return $modulo;
-
-    }
-
-    public function __construct(){
-
-        $this->db_name ='escuela';
-
-    }
-
-    public function create(){
-
-    }
-    public function read(){
-
-    }
-    public function update(){
-
-    }
-    public function delete(){
 
     }
 

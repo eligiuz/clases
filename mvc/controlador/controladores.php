@@ -26,4 +26,19 @@ class Controladores{
 
     }
 
+    public function createControladores(){
+
+        if(isset($_POST["nombreCreate"])){
+
+            $datosControladores = array('nombre' => $_POST["nombreCreate"], 'password' => $_POST["passwordCreate"], 'email' => $_POST["emailCreate"]);
+
+            $respuesta = Usuarios_model::create($datosControladores, "usuarios");
+
+            
+
+        }
+
+    }
+
+
 }

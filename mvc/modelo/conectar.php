@@ -1,28 +1,23 @@
 <?php 
-abstract class Conectar{
+class Conectar{
 
-    private static $host = 'localhost';
-    private static $user = 'root';
-    private static $password = 'root';
-    protected $db_name = 'escuela';
-    private static $charset = 'utf8';
-    private $conn;
-    protected $query;
-    protected $rows = array();
+    /*public $host = 'localhost';
+    public $user = 'root';
+    public $password = 'root';
+    public $db_name = 'escuela';
+    public $charset = 'utf8';
+    public $conn;
+    public $query;
+    public $rows = array();*/
 
     //Métodos
 
-    abstract protected function create();
-    abstract protected function read();
-    abstract protected function update();
-    abstract protected function delete();
-
     //conectar base de datos
 
-    private function conexion(){
+    static public function conexion(){
 
         try {
-            $conexion = new PDO("mysql:host=$host;dbname=$db_name;charset=$charset",$user,$password);
+            $conexion = new PDO("mysql:host=localhost;dbname=escuela;charset=utf8","root","root");
 
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
