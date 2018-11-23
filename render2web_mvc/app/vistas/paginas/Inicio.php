@@ -1,1 +1,5 @@
-<h1>Prueba de carga de vista</h1>
+<?php require RUTA_APP . '/vistas/inc/header.php'; ?>
+<h3><?php echo $datos['titulo']; ?></h3>
+<p>Framework php MVC</p>
+
+<?php require RUTA_APP . '/vistas/inc/footer.php'; ?>

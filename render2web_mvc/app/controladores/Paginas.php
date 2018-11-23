@@ -2,19 +2,16 @@
 
 class Paginas extends Controlador{
     public function __construct(){
-        //echo "Controlador páginas cargado";
+        
     }
 
     public function index(){
-        $this->vista('paginas/Inicio');
-    }
 
-    public function articulo(){
+        $datos = [
+            'titulo' => 'Bienvenido a MVC render2web'
+        ];
 
-    }
-
-    public function actualizar($num_registro){
-        echo $num_registro;
+        $this->vista('paginas/inicio', $datos);
     }
 
 }
