@@ -34,7 +34,15 @@ class Controladores{
 
             $respuesta = Usuarios_model::create($datosControladores, "usuarios");
 
-            
+            if($respuesta == "ejecutado"){
+
+                header("location:index.php?action=ok");
+
+            } else {
+
+                header("location:index.php");
+
+            }
 
         }
 

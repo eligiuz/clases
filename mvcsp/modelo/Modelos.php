@@ -8,6 +8,10 @@ class Modelos{
 
             $dato = "vista/modulos/$enlace.php";
 
+        } elseif ($enlace = "ok"){
+
+            $dato = "vista/modulos/insertar.php";
+        
         } else {
 
             $dato = "vista/modulos/inicio.php";

@@ -6,7 +6,7 @@ class Conectar{
 
         try {
 
-            $conexion =new PDO("mysql:host=localhost;dbname=escuela;charset=utf8","root",123456789);
+            $conexion =new PDO("mysql:host=localhost;dbname=escuela;charset=utf8","root","root");
 
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

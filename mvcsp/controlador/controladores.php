@@ -37,13 +37,11 @@ class Controladores{
 
             if($respuesta == "ejecutado"){
 
-                header("location:index.php?insertar");
-
-                echo "Usuario insertado";
+                header("location:index.php?action=ok");
 
             } else {
 
-                header("location:index.php?inicio");
+                header("location:index.php");
 
             }
 

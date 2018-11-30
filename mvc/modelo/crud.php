@@ -15,7 +15,16 @@ class Usuarios_model extends Conectar
         $stmt->bindParam(":password", $datosModelo["password"], PDO::PARAM_STR);
         $stmt->bindParam(":email", $datosModelo["email"], PDO::PARAM_STR);
 
-        $stmt->execute();
+        if($stmt->execute()){
+
+            return "ejecutado";
+
+        } else {
+
+            return "error";
+
+        }
+        
 
         $stmt->close();
 

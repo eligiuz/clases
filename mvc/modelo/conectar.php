@@ -1,14 +1,14 @@
 <?php 
 class Conectar{
 
-    /*public $host = 'localhost';
+    public $host = 'localhost';
     public $user = 'root';
     public $password = 'root';
     public $db_name = 'escuela';
     public $charset = 'utf8';
     public $conn;
     public $query;
-    public $rows = array();*/
+    public $rows = array();
 
     //Métodos
 
@@ -17,7 +17,7 @@ class Conectar{
     static public function conexion(){
 
         try {
-            $conexion = new PDO("mysql:host=localhost;dbname=escuela;charset=utf8","root","root");
+            $conexion = new PDO("mysql:host={$host};dbname={$db_name};charset=$charset",$user,$password);
 
             $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

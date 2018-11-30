@@ -1,4 +1,4 @@
-<h1>Pagina de Insertar</h1>
+<h1>Insertar</h1>
 
 <form method="post">
     
@@ -20,6 +20,10 @@
     $mvcInsertar = new Controladores;
     $mvcInsertar->insertarUsuarioControladores();
 
-    
+    if (isset($_GET["action"])) {
+            if ($_GET["action"] == "ok") {
+                echo "Registro exitoso";
+            }
+        }    
 
 ?>
