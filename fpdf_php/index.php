@@ -34,6 +34,9 @@ $fpdf->SetFont('Arial', 'B', 14);
 $fpdf->SetY(30);
 $fpdf->SetTextColor(16,87,97); //Cambia el color de la letra
 $fpdf->Cell(0,5, 'Listado de estudiantes matriculados', 0, 0, 'C');
+$fpdf->SetDrawColor(61,174,233);
+$fpdf->SetLineWidth(2);
+$fpdf->Line(60, $fpdf->GetY() + 5, 158, $fpdf->GetY() + 5);
 $fpdf->SetTextColor(0,0,0);
 
 $fpdf->Ln();
@@ -52,14 +55,20 @@ $fpdf->Ln(20);
 
 $fpdf->setFontSize(10);
 $fpdf->setFont('Arial', 'B');
-$fpdf->SetFillColor(11,63,71);
-$fpdf->SetTextColor(255,255,255);
+$fpdf->SetFillColor(255,255,255);
+$fpdf->SetTextColor(40,40,40);
 $fpdf->SetDrawColor(88,88,88);
-$fpdf->Cell(20, 5, 'N', 1, 0, 'C', 1);
-$fpdf->Cell(30, 5, 'NIE', 1, 0, 'C', 1);
-$fpdf->Cell(50, 5, 'Apellidos', 1, 0, 'C', 1);
-$fpdf->Cell(50, 5, 'Nombre', 1, 0, 'C', 1);
-$fpdf->Cell(10, 5, 'Sexo', 1, 0, 'C', 1);
-$fpdf->Cell(35, 5, 'F. de nacimiento', 1, 0, 'C', 1);
+$fpdf->Cell(20, 10, 'N', 0, 0, 'C', 1);
+$fpdf->Cell(30, 10, 'NIE', 0, 0, 'C', 1);
+$fpdf->Cell(50, 10, 'Apellidos', 0, 0, 'C', 1);
+$fpdf->Cell(50, 10, 'Nombre', 0, 0, 'C', 1);
+$fpdf->Cell(10, 10, 'Sexo', 0, 0, 'C', 1);
+$fpdf->Cell(35, 10, 'F. de nacimiento', 0, 0, 'C', 1);
+$fpdf->SetDrawColor(61,174,233);
+$fpdf->SetLineWidth(1);
+$fpdf->Line(15, 80, 205, 80);
+#fpdf->SetTextColor(0,0,0);
+
+$estudiante = $model->BoletaCaptura(26);
 
 $fpdf->OutPut();
